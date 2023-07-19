@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- start loading fonts -->
+    <link href="./fonts/roboto.css" rel="stylesheet">
+
+    <!-- include jQuery UI - v1.12.1 -->
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+
+    <!-- datepicker css - you can load the minified version datepicker.min.css or datepicker.css -->
+    <link href="./css/datepicker.min.css" rel="stylesheet" type="text/css">
+
+    <!-- rangeslider plugin minified css -->
+    <link href="./css/rangeslider.min.css" rel="stylesheet" type="text/css">
+
+    <!-- default fekma css file for material elements -->
+    <link href="./css/fekma.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body style="padding-top: 20px;">
+    <form>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Text" type="text"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Search" type="search"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Email" type="email"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Password" type="password"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Url" type="url"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Number 1" type="number"
+                placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" label-name="Number 2" type="number" min="0" max="100" step="10"
+                value="30" placeholder=""></krag-textbox>
+        </div>
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" label-name="Phone" type="phone" placeholder=""></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-radio style-options="primary-style" name="items" value="Item 1"></krag-radio>
+        </div>
+        <div style="padding: 10px;">
+            <krag-radio style-options="primary-style" name="items" value="Item 2" checked="true"></krag-radio>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-checkbox style-options="primary-style" name="checkbox-item" value="Item 1"></krag-checkbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-checkbox style-options="primary-style" name="checkbox-item" value="Item 2"></krag-checkbox>
+        </div>
+
+
+        <div style="padding: 10px;">
+            <krag-switch style-options="primary-style" rounded name="switch-item" checked></krag-switch>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-switch style-options="primary-style" rounded name="switch-item"></krag-switch>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-button style-options="primary-style" rounded name="button"></krag-button>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-button style-options="primary-style" rounded outlined name="button"></krag-button>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-button style-options="primary-style" rounded filled name="button"></krag-button>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-button style-options="primary-style" rounded text name="button"></krag-button>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Date" type="date" name="date"
+                placeholder=""></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Month" type="date" name="date"
+                placeholder="" data-min-view="months" data-view="months" data-date-format="MM yyyy"></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Years" type="date" name="date"
+                placeholder="" data-min-view="years" data-view="years" data-date-format="yyyy"></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Date and Time" type="date" name="date"
+                placeholder="" data-timepicker="true"></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-textbox style-options="primary-style" value="" label-name="Date Range" type="date" name="date"
+                placeholder="" data-range="true" data-multiple-dates-separator=" - "></krag-textbox>
+        </div>
+
+        <div style="padding: 10px;">
+            <krag-slide-range class="slide-range-1" style-options="primary-style" value="80%"></krag-slide-range>
+        </div>
+
+    </form>
+
+    <!-- load the jquery -->
+    <script src="./js/jquery.min.js"></script>
+
+    <!-- load the fekma elements js -->
+    <script src="./js/fekma.js"></script>
+
+    <!-- load the range slider -->
+    <script src="./js/rangeslider.min.js"></script>
+
+    <!-- datepicker js - you can load the minified version datepicker.min.js or datepicker.js -->
+    <script src="./js/datepicker.js"></script>
+
+    <!-- select the datepicker language -->
+    <script src="./js/lang/datepicker.en.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            new RangeSlider($(".slide-range-1"), {
+                size: 1,
+                borderSize: 0.4,
+                percentage: 80
+            });
+        });
+    </script>
+
+</body>
+
+</html>
