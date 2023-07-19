@@ -1,3 +1,16 @@
+/* 
+
+ ----------- Fekma -----------
+
+An open source ui/ux library from krag. Based on the googal material design.
+
+*/
+
+:root {
+    --primary-color: #1a73e8;
+    --textbox-label-background-color: #ffffff;
+}
+
 .krag-textbox {
     border: 1px solid rgba(107, 107, 107, 0.24);
     color: #848484;
@@ -188,147 +201,53 @@ input:focus {
     border-radius: 2px;
 }
 
-input[type=text]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
+/* focus event for custom input boxes */
 
-input[type=text]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
-}
-
-input[type=search]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
-
-input[type=search]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
-}
-
-input[type=email]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
-
-input[type=email]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
-}
-
+input[type=url]:focus~.textbox-label,
+input[type=text]:focus~.textbox-label,
+input[type=phone]:focus~.textbox-label,
+input[type=email]:focus~.textbox-label,
+input[type=search]:focus~.textbox-label,
+input[type=number]:focus~.textbox-label,
 input[type=password]:focus~.textbox-label {
     top: -10px;
     left: 12px;
     z-index: 1;
     font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
+    color: var(--primary-color);
+    background-color: var(--textbox-label-background-color);
 }
 
+/* valid event for custom input boxes */
+
+input[type=url]:valid~.textbox-label,
+input[type=text]:valid~.textbox-label,
+input[type=phone]:valid~.textbox-label,
+input[type=email]:valid~.textbox-label,
+input[type=search]:valid~.textbox-label,
+input[type=number]:valid~.textbox-label,
 input[type=password]:valid~.textbox-label {
     top: -10px;
     left: 12px;
     z-index: 1;
     font-size: 13px;
-    background-color: white;
-}
-
-input[type=url]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
-
-input[type=url]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
-}
-
-input[type=number]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
-
-input[type=number]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
-}
-
-input[type=phone]:focus~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
-}
-
-input[type=phone]:valid~.textbox-label {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    background-color: white;
+    background-color: var(--textbox-label-background-color);
 }
 
 
 /* Chrome, Safari, Edge, Opera */
 
 input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
+input[type=number]::-webkit-inner-spin-button,
 input[type=phone]::-webkit-outer-spin-button,
 input[type=phone]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-
 /* Firefox */
 
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
+input[type=number],
 input[type=phone] {
     -moz-appearance: textfield;
 }
@@ -342,13 +261,12 @@ input[type=phone] {
 }
 
 .krag-textbox>.force-input-valid:focus {
-    top: -10px;
-    left: 12px;
-    z-index: 1;
-    font-size: 13px;
-    color: #1a73e8;
-    background-color: white;
+    color: var(--primary-color);
 }
+
+/*
+----------------------------------------------- radio -----------------------------------------------
+*/
 
 .radio-label {
     padding-left: 35px;
@@ -839,7 +757,7 @@ input:checked+.slider>.slider-container:before {
 /*  color categories */
 
 .primary-style {
-    border: 2px solid #1a73e8;
+    border: 2px solid var(--primary-color);
     background: transparent;
     transition: border 280ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(.77, 0, .18, 1);
     transition: 0.2s ease all;
@@ -848,19 +766,19 @@ input:checked+.slider>.slider-container:before {
 }
 
 .primary-style:hover {
-    border: 2px solid #1a73e8;
+    border: 2px solid var(--primary-color);
     background: transparent;
 }
 
 .primary-style:active {
-    border: 2px solid #1a73e8;
+    border: 2px solid var(--primary-color);
     background: transparent;
 }
 
 .button-primary-style-filled {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    background: #1a73e8;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -879,10 +797,10 @@ input:checked+.slider>.slider-container:before {
 }
 
 .button-primary-style-outlined {
-    border: 1px solid #1a73e8;
+    border: 1px solid var(--primary-color);
     background: transparent;
     transition: background 80ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    color: #1a73e8;
+    color: var(--primary-color);
 }
 
 .button-primary-style-outlined:hover {
@@ -904,7 +822,7 @@ input:checked+.slider>.slider-container:before {
 .button-primary-style-text {
     background: transparent;
     transition: background 80ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    color: #1a73e8;
+    color: var(--primary-color);
 }
 
 .button-primary-style-text:hover {
@@ -1046,129 +964,6 @@ input:checked+.slider>.slider-container:before {
 .was-validated .form-check-input:invalid~.invalid-feedback,
 .was-validated .form-check-input:invalid~.invalid-tooltip {
     display: block
-}
-
-.tooltip {
-    position: absolute;
-    z-index: 1070;
-    display: block;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    text-align: start;
-    text-decoration: none;
-    text-shadow: none;
-    text-transform: none;
-    letter-spacing: normal;
-    word-break: normal;
-    word-spacing: normal;
-    white-space: normal;
-    line-break: auto;
-    font-size: .875rem;
-    word-wrap: break-word;
-    opacity: 0
-}
-
-.tooltip.show {
-    opacity: .9
-}
-
-.tooltip .arrow {
-    position: absolute;
-    display: block;
-    width: .1rem;
-    height: .1rem
-}
-
-.tooltip .arrow::before {
-    position: absolute;
-    content: "";
-    border-color: transparent;
-    border-style: solid
-}
-
-.bs-tooltip-auto[x-placement^=top],
-.bs-tooltip-top {
-    padding: .0rem 0
-}
-
-.bs-tooltip-auto[x-placement^=top] .arrow,
-.bs-tooltip-top .arrow {
-    bottom: 0
-}
-
-.bs-tooltip-auto[x-placement^=top] .arrow::before,
-.bs-tooltip-top .arrow::before {
-    top: 0;
-    border-width: .0rem .0rem 0;
-    border-top-color: #000
-}
-
-.bs-tooltip-auto[x-placement^=right],
-.bs-tooltip-right {
-    padding: 0 .0rem
-}
-
-.bs-tooltip-auto[x-placement^=right] .arrow,
-.bs-tooltip-right .arrow {
-    left: 0;
-    width: .0rem;
-    height: .0rem
-}
-
-.bs-tooltip-auto[x-placement^=right] .arrow::before,
-.bs-tooltip-right .arrow::before {
-    right: 0;
-    border-width: .0rem .0rem .0rem 0;
-    border-right-color: #000
-}
-
-.bs-tooltip-auto[x-placement^=bottom],
-.bs-tooltip-bottom {
-    padding: .0rem 0
-}
-
-.bs-tooltip-auto[x-placement^=bottom] .arrow,
-.bs-tooltip-bottom .arrow {
-    top: 0
-}
-
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
-.bs-tooltip-bottom .arrow::before {
-    bottom: 0;
-    border-width: 0 .0rem .0rem;
-    border-bottom-color: #000
-}
-
-.bs-tooltip-auto[x-placement^=left],
-.bs-tooltip-left {
-    padding: 0 .0rem
-}
-
-.bs-tooltip-auto[x-placement^=left] .arrow,
-.bs-tooltip-left .arrow {
-    right: 0;
-    width: .0rem;
-    height: .0rem
-}
-
-.bs-tooltip-auto[x-placement^=left] .arrow::before,
-.bs-tooltip-left .arrow::before {
-    left: 0;
-    border-width: .4rem 0 .4rem .4rem;
-    border-left-color: #000
-}
-
-.tooltip-inner {
-    max-width: 200px;
-    padding: .25rem .5rem;
-    color: #fff;
-    text-align: center;
-    background-color: #000;
-    border-radius: .25rem
 }
 
 .horizontal_align_center {
